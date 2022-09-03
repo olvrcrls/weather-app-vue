@@ -1,7 +1,7 @@
 <template>
     <Teleport to="body">
         <Transition name="modal-outer">
-            <div v-show="modalActive"
+            <div v-show="modalActive" @click="$emit('close-modal')"
             class="absolute top-0 left-0 flex justify-center w-full h-screen px-8 bg-black bg-opacity-30">
                 <Transition name="modal-inner">
                     <div v-if="modalActive" class="self-start max-w-screen-md p-4 mt-32 bg-white">
